@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <!-- META TAG DE OG -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cardapio Online">
+    <!-- <meta property="og:image" content=""> imagem do site logo -->
+    <!-- <meta property="og:description" content=""> imagem do site logo -->
+    <!-- <meta property="og:site_name" content=""> imagem do site logo -->
+
+    <link rel="stylesheet" href="./styles/output.css">
+   
+    <title>Cardapio Online</title>
+</head>
+<body>
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img src="./assets/hamb-1.png" alt="Logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
+            <h1 class="text-3xl mt-4 mb-2 font-bold text-white">DevBurguer</h1>
+            <span class="text-white font-medium"> Rua teste 123, Alto Teresópolis-RJ</span>
+            <div class="bg-green-700 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
+            </div>
+        </div>
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6"> Conheça nosso menu</h2>
+
+    <div id="menu" class="">
+        <main class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/14.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">MONSTER</p>
+                    <p class="text-sm">
+                        Blend de 260g (veja bem... 260g!!!) de carne bovina e bacon, moídos juntos e misturados, nossa deliciosa maionese de alho poró, queijo e molho BarbeKill.
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 36,90</p>
+                        <button data-name="MONSTER" data-price="36.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/16.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">IMORTAL</p>
+                    <p class="text-sm">
+                        Com nada menos que 520g de carne e bacon moídos juntos e misturados (atenção: 520g de carne!), esta é a nossa versão VIOLENTA do Monster.
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 64,90</p>
+                        <button data-name="IMORTAL" data-price="64.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/42.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">BALBOA</p>
+                    <p class="text-sm">
+                        Novo burger com blend de 200g de carne bovina, pernil e linguiça calabresa, moídos e misturados em proporções perfeitas! Vem com queijo.
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 34,90</p>
+                        <button data-name="BALBOA" data-price="34.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/41.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">WARPIGS</p>
+                    <p class="text-sm">
+                        Burger de 200g de pernil e linguiça calabresa moídos juntos e misturados, maionese de limão, farofa de bacon, queijo e picles de cebola roxa.
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 34.90</p>
+                        <button data-name="WARPIGS" data-price="34.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/25.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">IMORTAL HURRICANE</p>
+                    <p class="text-sm">
+                        400g de pura costela BOVINA glaceada no nosso BARBEKILL, tiras de bacon crocante, cheddar DUPLO, maionese no pão de parmesão
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 64.90</p>
+                        <button data-name="IMORTAL HURRICANE" data-price="64.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/25.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">HURRICANE</p>
+                    <p class="text-sm">
+                        Burger de 200g da mais pura costela bovina, glaceada ao nosso delicioso BarbeKill® e carinhosamente grelhada nas brasas do inferno.
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 36.90</p>
+                        <button data-name="HURRICANE" data-price="36.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/390.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">RED HOT BALBOA</p>
+                    <p class="text-sm">
+                        25cm de linguiça, uma deliciosa maionese de cebola e salsa, american cheese, molho de tomate e o anéis de cebola crocantes
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 24.90</p>
+                        <button data-name="RED HOT BALBOA" data-price="24.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/391.jpg" alt="Hamburger">
+                <div>
+                    <p class="font-bold">RED HOT WARPIGS</p>
+                    <p class="text-sm">
+                        25cm de linguiça, maionese lemon pepper, bacon crocante, pickles de cebola roxa, molho de tomate e american cheese.
+                    </p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 24.90</p>
+                        <button data-name="RED HOT WARPIGS" data-price="24.90" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Bebidas</h2>
+        </div>
+
+        <div id="menu" class="grid grid-cols-1 md:grid-cols-2  gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/coca-cola.png" alt="coca">
+                <div class="w-full">
+                    <p class="font-bold">Coca lata</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 8,00</p>
+                        <button data-name="coca lata" data-price="8.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/guarana.jpg" alt="guarana">
+                <div class="w-full">
+                    <p class="font-bold">Guaraná lata</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 6,00</p>
+                        <button data-name="guarana" data-price="6.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/pepsi.png" alt="pepsi">
+                <div class="w-full">
+                    <p class="font-bold">Pepsi lata</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 6,00</p>
+                        <button data-name="pepsi" data-price="6.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/fanta.jpg" alt="pepsi">
+                <div class="w-full">
+                    <p class="font-bold">Fanta Laranja lata</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 6,00</p>
+                        <button data-name="Fanta Laranja" data-price="6.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/307.jpg" alt="BUDWEISER">
+                <div class="w-full">
+                    <p class="font-bold">BUDWEISER</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 12,00</p>
+                        <button data-name="BUDWEISER" data-price="12.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/352.jpg" alt="CORONA">
+                <div class="w-full">
+                    <p class="font-bold">CORONA</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 12,00</p>
+                        <button data-name="CORONA" data-price="12.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/308.jpg" alt="HEINEKEN">
+                <div class="w-full">
+                    <p class="font-bold">HEINEKEN</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 12,00</p>
+                        <button data-name="HEINEKEN" data-price="12.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" src="./assets/food/309.jpg" alt="EISENBANH">
+                <div class="w-full">
+                    <p class="font-bold">EISENBANH</p>                    
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="text-lg font-bold">R$ 12,00</p>
+                        <button data-name="EISENBANH" data-price="12.00" class="bg-gray-900 px-5 rounded add-to-cart-btn"><i class="fas fa-cart-plus text-lg text-white"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden">
+        <div style="overflow: auto; height: 400px;" class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] ">
+            <h2 class="text-center font-bold text-2x mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            <p class="font-bold mt-4"> Endereço de Entrega:</p>
+            <input id="address" class="w-full border-2 p-1 rounded my-1 pl-4 pr-4" type="text" placeholder="Digite seu endereço">
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+            <div class="flex items-center justify-between mt-4">
+                <button id="close-modal-btn" class="text-gray px-4 py-1">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1">Finalizar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full bg-red-600 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button id="cart-btn" class="flex items-center gap-2 text-white font-bold">
+            (<span id="cart-count">0</span>)
+            Veja meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./main.js"></script>    
+</body>
+</html>
+
