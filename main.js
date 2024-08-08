@@ -140,7 +140,7 @@ checkoutBtn.addEventListener("click", function(){
     }).join("");
 
     const message = encodeURIComponent(cartItems);
-    const phone = "21979664294";    
+    const phone = "5521979664294";    
     window.open(`https://wa.me/${phone}?text=${message} Endereco:${inputAddress.value}`, "_blank");
     cartModal.style.display = "none";
     cart = [];
