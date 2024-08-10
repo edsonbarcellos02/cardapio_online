@@ -13,9 +13,9 @@
     <!-- META TAG DE OG -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Cardapio Online">
-    <!-- <meta property="og:image" content=""> imagem do site logo -->
-    <!-- <meta property="og:description" content=""> imagem do site logo -->
-    <!-- <meta property="og:site_name" content=""> imagem do site logo -->
+    <meta property="og:image" content="https://cardapio-online-two-alpha.vercel.app/assets/food/41.jpg">
+    <meta property="og:description" content="Conheça nosso menu"> 
+    <meta property="og:site_name" content="Cardapio Online">
 
     <link rel="stylesheet" href="./styles/output.css">
    
@@ -25,8 +25,8 @@
     <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img src="./assets/hamb-1.png" alt="Logo" class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200">
-            <h1 class="text-3xl mt-4 mb-2 font-bold text-white">DevBurguer</h1>
-            <span class="text-white font-medium"> Rua teste 123, Alto Teresópolis-RJ</span>
+            <h1 class="text-3xl mt-4 mb-2 font-bold text-white">Rústico Burgers</h1>
+            <span class="text-white font-medium">Av. Alberto Tôrres - Teresópolis</span>
             <div class="bg-green-700 px-4 py-1 rounded-lg mt-5" id="date-span">
                 <span class="text-white font-medium">Seg á Dom - 18:00 as 22:00</span>
             </div>
@@ -232,17 +232,18 @@
     </div>
 
     <div id="cart-modal" class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden">
-        <div style="overflow: auto; height: 400px;" class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] ">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] ">
             <h2 class="text-center font-bold text-2x mb-2">Meu carrinho</h2>
 
-            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
-            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+            <div style="overflow: auto; height: 290px;" id="cart-items" class="flex justify-start mb-2 flex-col p-[15px]"></div>
+
+            <p class="bg-gray-300 font-bold p-[4px] rounded-md">Total: <span id="cart-total">0.00</span></p>
             <p class="font-bold mt-4"> Endereço de Entrega:</p>
             <input id="address" class="w-full border-2 p-1 rounded my-1 pl-4 pr-4" type="text" placeholder="Digite seu endereço">
             <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
             <div class="flex items-center justify-between mt-4">
-                <button id="close-modal-btn" class="text-gray px-4 py-1">Fechar</button>
-                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1">Finalizar</button>
+                <button id="close-modal-btn" class="bg-red-600 text-white px-4 py-1 rounded-md">Fechar</button>
+                <button id="checkout-btn" class="bg-green-600 text-white px-4 py-1 rounded-md">Finalizar</button>
             </div>
         </div>
     </div>

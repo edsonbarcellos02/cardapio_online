@@ -59,11 +59,11 @@ function updateCartModal (){
         cartItemElement.innerHTML = `
             <div class="flex item-center justify-between">
                 <div>
-                    <p class="font-medium">${item.name}</p>
+                    <p class="font-medium font-bold">${item.name}</p>
                     <p>Qtd: ${item.quantity}</p>
                     <p class="font-medium mt-2">R$ ${item.value.toFixed(2)}</p>
                 </div>
-                 <button class="remove-from-cart-btn" data-name="${item.name}">Remover</button>                
+                 <button class="remove-from-cart-btn text-red-700" data-name="${item.name}">Remover</button>                
             </div>
         `
 
@@ -135,13 +135,13 @@ checkoutBtn.addEventListener("click", function(){
 
     const cartItems = cart.map((item)=>{
         return(
-            `${item.name} Quantidade: (${ item.quantity }) Preço: R$ ${ item.value.toFixed(2) } | `
+            `*${item.name}*: \n- Quantidade: (${ item.quantity }) \n- Preço: R$ ${ item.value.toFixed(2) } \n`
         )
     }).join("");
 
     const message = encodeURIComponent(cartItems);
     const phone = "5521979664294";    
-    window.open(`https://wa.me/${phone}?text=${message} Endereco:${inputAddress.value}`, "_blank");
+    window.open(`https://wa.me/${phone}?text=${message} \n\n*Endereco*: ${ inputAddress.value }`, "_blank");
     cartModal.style.display = "none";
     cart = [];
     updateCartModal();
@@ -151,7 +151,7 @@ checkoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen (){
     const data = new Date();
     const hora = data.getHours();
-    return hora >=18 && hora < 22;
+    return true//hora >=18 && hora < 22;
 }
 
 const spanItem = document.getElementById("date-span");
